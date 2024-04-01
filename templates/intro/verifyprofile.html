@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.L.O.B.E. - Verify</title>
+    <link rel="stylesheet" href="./assets/css/jobs.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css" />
+    <link rel="stylesheet" href="/assets/css/verifyprofile.css">
+    <link rel="stylesheet" href="/assets/css/signin.css">
+</head>
+<body>
+      <section>
+        <div style="height: 600px;" class="container" id="container">
+        
+        <div class="form-container sign-in-container">
+            <form action="http://localhost:5000/apply" method="POST">
+                <span>Confirm your details</span>
+                <input type="text" placeholder="Name" name="name" />
+                <input type="email" placeholder="Email" name="email" />
+                <input type="number" placeholder="Age" name="age" />
+                <input type="text" placeholder="Contact" name="contact" />
+                <input type="text" placeholder="You are identified as" name="gender" />
+                <input type="number" placeholder="Years of experience" />
+                <span>Upload your resume</span>
+                <input type="file" placeholder="Your Resume" />
+                <button type="submit">Apply</button>
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <!-- <img src="assets/images/headhunting.png" style="height: 50px, width: auto" alt=""> -->
+                    <h1>Hello, Friend!</h1>
+                    <p>Apply with a simple form, and sit back as we connect your dream company with you!</p>
+                    
+                    <a href="index.html"><button class="ghost" id="signUp">Back Home</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+     <!-- jQuery -->
+     <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+     <!-- Bootstrap -->
+     <script src="assets/js/popper.js"></script>
+     <script src="assets/js/bootstrap.min.js"></script>
+ 
+     <!-- Plugins -->
+     <script src="assets/js/scrollreveal.min.js"></script>
+     <script src="assets/js/waypoints.min.js"></script>
+     <script src="assets/js/jquery.counterup.min.js"></script>
+     <script src="assets/js/imgfix.min.js"></script>
+ 
+     <!-- Global Init -->
+     <script src="assets/js/custom.js"></script>
+</body>
+</html>

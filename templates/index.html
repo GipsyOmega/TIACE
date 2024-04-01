@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Upload a CSV File</h1>
+    <form id="csvForm" enctype="multipart/form-data">
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+        <button type="submit">Upload CSV</button>
+    </form>
+    <div id="predictions"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#csvForm').submit(function(e) {
+                e.preventDefault();
+                let formData = new FormData(this);
+                $.ajax({
+                    type: 'POST',
+                    url: '/',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $('#predictions').html(response);
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
