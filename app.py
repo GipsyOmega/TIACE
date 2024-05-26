@@ -13,7 +13,7 @@ model = pickle.load(open("models/tiace_pickle.pkl",'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('front.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -21,7 +21,8 @@ def upload_file():
         csv_file = request.files['csvFile']
         if csv_file:
             df = pd.read_csv(csv_file, header=None)
-            feature = df.iloc[:100,:186].values
+            feature = df.iloc[:5,:186].values
+            print(feature.shape, len(feature))
             label = df[187]
             X = feature.reshape(len(feature), feature.shape[1],1)
 
@@ -32,7 +33,7 @@ def upload_file():
             pred_str = "\n".join(labels)
             return pred_str
 
-    return render_template('index.html')
+    return render_template('front.html')
 
 
 if __name__=="__main__":
